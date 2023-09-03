@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/Home.css') }}">
+</head>
+<body>
+  <!-- <div class="WebContainer"> -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593</button>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Cultivó</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#main">HOME</a></li>
+                    <li><a href="/news" target="_blank">NEWS</a></li>
+                    <!-- <li><a href="textchatbot" target="_blank"></a></li> -->
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <!-- <li><a href="textchatbot" target="_blank">CHAT</a></li>
+                    <li><a href="chatbot" target="_blank">VOICE CHAT</a></li> -->
+                </ul>
+            </div>
+            <div class = "search" id="google_translate_element">
+            </div>
+ 
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement(
+                        {pageLanguage: 'en'},
+                        'google_translate_element'
+                    );
+                }
+            </script>
+         
+            <script type="text/javascript"
+                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+            </script>
+         
+
+        </div> 
+        <div class="content">
+            <h1><p>A Farmer-friendly</p><span>Website</span> <br><p> Regional Languages</p></h1><br>
+                <!-- <button class="cn"><a href="/explore">Explore</a></button> -->
+                <form class="form" method="post" action="/login_validation">
+                    <h2>Sign In</h2>
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                    <button type="submit" class="btnn btn-primary btn-block btn-lg" value="Login"><a>Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="/register">Sign-up</a> here</a></p>
+                    
+
+               </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- <div id="crops">
+        <a href="cbmain.js"></a>
+
+
+    </div> -->
+    <div class="container1" id="about">
+        <img src="static/css/img/about.jpg" alt="About" style="width:100%;">
+        <div class="text-block">
+          <h4 style="color:rgb(5, 5, 5); font-size:2.13em; font-family: fantasy;">About</h4>
+        <p>Farming has been the backbone of our country. More than 42 percent in India are employed directly or farming related activities. Empowering our farmers will effectively help our economy. This will have instructions and information about seasonal and suitable crops, seeds, farming tools & instruments etc.</p>
+        </div>
+      </div>
+      <div class="bg-img" id="contact">
+        <form action="/action_page" class="container">
+          <h1>Contact</h1>
+      
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter name" name="name" required>
+          <label for="mobile number"><b>Mobile Number</b></label>
+          <input type="text" placeholder="Enter Mobile number" name="mobile number" required>
+      
+          <label for="sug"><b>Queries</b></label>
+          <input type="text" placeholder="Enter queries" name="sug" required>
+      
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    
+      <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script> 
+  
+</body>
+</html>
